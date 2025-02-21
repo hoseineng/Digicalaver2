@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 1130px) {
+          .header1 {
+            display: none; /* مخفی کردن هدر در موبایل */
+          }
+          .header2 {
+            display: none; /* مخفی کردن هدر در موبایل */
+          }
+      }
+  
+      @media (min-width: 1130px) {
+        .header1 {
+          position: sticky;
+          top: 0;
+          z-index: 1000; /* برای اطمینان از اینکه هدر بالای سایر المان‌ها نمایش داده بشه */
+          padding-top: 40px;
+        }
+        .header2 {
+          padding-top: 30px;
+        }
+        .nav-l{
+            display: none;
+          }
+      }
+  
+  
+  
+        @media (max-width:400px) {
+          .font-x-smaller{
+            font-size: xx-small;
+          }
+          .pad-ss{
+            padding: 20px;
+          }
+          .penhan{
+            display: none;
+          }
+        }
+          
+        
+        @media (max-width: 800px){
+          .font-smaller{
+            font-size: small;
+          }
+          .h-slider{
+            height: 300px;
+          }
+        }
+  
+        #ali p{
+          padding: 0px 5px;
+        }
+        .cat-scrol{
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 15px;
+          -webkit-overflow-scrolling: touch;
+          cursor: pointer;
+        }
+        .item{
+          display: block;
+          flex-shrink: 0;
+          width: 120px;
+          height: 170px;
+          text-align: center;
+          scroll-snap-align: center;
+        }
+        .item img{
+          width: 100%;
+          height: 130px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        .cat-scrol::-webkit-scrollbar{
+          display: none;
+        }
+        .sb{
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          /* top: 50%;
+          transform: translateY(-50%); */
+          color: black;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          z-index: 10;
+        }
+        .sbl{
+          left: 0;
+        }
+        .sbr{
+          right: 0;
+        }
+  
+      </style>
+</head>
+<body>
+    
+</body>
+</html>

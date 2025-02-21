@@ -1,0 +1,24 @@
+/* @media screen and(min-width:320px) and (max-width:768px) {
+    .h-page-layout , .h-filter-sidebar{
+        display: none !important;
+    }
+} */
+@media (max-width:1200px){
+    .h-filter-sidebar{
+        display: none !important;
+    }
+}
+
+@media (max-width:993px){
+    .h-sorting-options{
+        display: none !important;
+    }
+}
+@media (max-width:840px) {
+    .h-products-grids-product__headphone{
+        max-width: 17rem !important;
+    height: 14rem !important;
+    margin: 10px;
+    }
+}
+

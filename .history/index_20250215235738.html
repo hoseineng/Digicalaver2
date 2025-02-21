@@ -1,0 +1,1849 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>فروشگاه اینترنتی دیجی کالا</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./css/media-queries.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.rtl.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Hello, world!</title>
+    <style>
+      @media (max-width: 1130px) {
+        .header1 {
+          display: none; /* مخفی کردن هدر در موبایل */
+        }
+        .header2 {
+          display: none; /* مخفی کردن هدر در موبایل */
+        }
+    }
+
+    @media (min-width: 1130px) {
+      .header1 {
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* برای اطمینان از اینکه هدر بالای سایر المان‌ها نمایش داده بشه */
+        padding-top: 40px;
+      }
+      .header2 {
+        padding-top: 30px;
+      }
+      .nav-l{
+          display: none;
+        }
+    }
+
+
+
+      @media (max-width:400px) {
+        .font-x-smaller{
+          font-size: xx-small;
+        }
+        .pad-ss{
+          padding: 20px;
+        }
+        .penhan{
+          display: none;
+        }
+      }
+        
+      
+      @media (max-width: 800px){
+        .font-smaller{
+          font-size: small;
+        }
+        .h-slider{
+          height: 300px;
+        }
+      }
+
+      #ali p{
+        padding: 0px 5px;
+      }
+      .cat-scrol{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        -webkit-overflow-scrolling: touch;
+        cursor: pointer;
+      }
+      .item{
+        display: block;
+        flex-shrink: 0;
+        width: 120px;
+        height: 170px;
+        text-align: center;
+        scroll-snap-align: center;
+      }
+      .item img{
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .cat-scrol::-webkit-scrollbar{
+        display: none;
+      }
+      .sb{
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        /* top: 50%;
+        transform: translateY(-50%); */
+        color: black;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .sbl{
+        left: 0;
+      }
+      .sbr{
+        right: 0;
+      }
+
+    </style>
+  </head>
+  <body class="body" rt>
+    <div class="container">
+        <header>
+          <nav class="navbar navbar-expand-lg bg-white text-dark nav-l">
+            <div class="container">
+              <div class=" text-center px-1 col-4" style="font-size: small; padding: 5px; border: 1px solid rgb(116, 116, 116); border-radius: 7px; margin: 5px; ">ثبت نام | ورود <i class="fa-solid fa-right-to-bracket"></i></div>
+                <img class=" col-4 img-fluid" src="./img/111.PNG" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="نمایش منو">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">خدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+          <div class=" header1">
+            <div class="navbar d-flex p-2 bg-white text-muted" style="position: fixed;top: 0; left: 0;right:0;z-index:1000; ">
+              <div class="col-4 d-flex text-center" style="display: flex; align-items: center;left: 0;">
+                <i class="fa-solid fa-cart-shopping text-xlg"></i>
+                <p style="padding-right: 20px;padding-left: 20px;bottom: 10px;">|</p>
+                <div class=" text-center px-4" style="font-size: medium; padding: 6px; border: 1px solid rgb(116, 116, 116); border-radius: 7px; margin: 5px; ">ثبت نام | ورود <i class="fa-solid fa-right-to-bracket "></i></div>
+              </div>
+              <div class=" col-6 text-end border-radius border-light bg-light p-2" style="border-radius: 8px;">جستوجو<i class="fa-solid fa-magnifying-glass px-3"></i></div>
+              <img class=" col-2" src="./img/111.PNG" alt="">
+            </div>
+          </div>
+        </div>
+          <div class="header2">
+            <div class="d-flex text-dark">
+              <div class="col-2 text-center font-smaller" style="background-color: antiquewhite; padding: 5px;  border-radius: 20px; margin: 5px; left: 20px; color: rgb(255, 72, 0);">شهر خود را انتخاب کنید<i class="fa-solid fa-location-dot px-2"></i></div>
+              <div id="ali" class=" d-flex col-10 text-start text-muted" style="text-align: center; justify-content: right;">
+                <p> در دیجی کالا بفروشید </p>
+                <p> سوالی دارید؟ </p>
+                <p> | </p>
+                <p> پرفروش ترین ها <i class="fa-solid fa-fire"></i></p>
+                <p> طلای دیجیتال <i class="fa-solid fa-coins"></i></p>
+                <p> سوپر مارکت <i class="fa-solid fa-basket-shopping"></i></p>
+                <p> شگفت انگیز ها <i class="fa-solid fa-percent"></i></p>
+                <p> | </p>
+                <p>دسته بندی کالاها<i class="fa-solid fa-bars"></i></p>
+              </div>
+            </div>
+          </div>
+            <div class="text-white bg-danger py-3 text-center row mt-0">
+                <section class="col-2 justify-content-center alig-items-center"><i class="fa-solid fa-magnifying-glass fa-shake"></i></section>
+                <section class="col-8 justify-content-center alig-items-center text-xxlg">پیشنهاد شگفت انگیز</section>
+                <section class="col-2 justify-content-center alig-items-center"><i class="fa-solid fa-arrow-right fa-fade"></i></section>
+            </div>
+            <div id="carouselExample" class="carousel slide " data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="rounded carousel-item active">
+                      <img src="./img/1.jpg" class="d-block w-100 h-slider img-fluid" alt="تصویر 1">
+                  </div>
+                  <div class="rounded carousel-item">
+                      <img src="./img/2.jpg" class="d-block w-100 h-slider img-fluid" alt="تصویر 2">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">قبلی</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">بعدی</span>
+              </button>
+            </div>
+        </header>
+        <main>
+          <div class="bg-danger p-2 p-lg-4">
+            <div class="text-white text-end p-2 p-lg-4 fw-bold text-lg">شگفت انگیز امروز<i class="fa-regular fa-star fa-bounce"></i></div>
+            <div class="text-end d-flex cat-scrol text-end" style="direction: rtl;">
+              <div class="card col-5 m-1 m-md-2 p-1 p-lg-2 font-smaller font-x-smaller">
+                <div><p class="text-danger text-end font-weight-bold pt-2 pr-3 fw-bold">پیشنهاد شگفت انگیز</p></div>
+                <div class="row d-block d-lg-flex">
+                  <div class="col-12 col-lg-4 text-center"><img class="img-fluid" src="./img/a1.PNG" alt=""></div>
+                  <div class="col-12 col-lg-8 text-muted pad-ss px-3">
+                    <p class="text-dark text-end">گردنبند طلا 18 عیار زنانه</p>
+                    <div class=" row mt-2 py-1 text-center">
+                      <p class=" col-12 col-md-8 col-lg-9 text-dark text-end fw-bold">تومان7,900,000</p>
+                      <p class="col-5 col-md-3 col-lg-2 bg-danger text-white text-center text-end mr-2" style=" border-radius: 10px; right: 0;">8%</p>
+                      <p class="text-decoration-line-through text-end pb-2 mt--2">8,900,000</p>
+                      <div class="countdown text-danger text-sm text-start timer" id="timer1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-5 m-1 m-md-2 p-1 p-lg-2 font-smaller font-x-smaller">
+                <div><p class="text-danger text-end font-weight-bold pt-2 pr-3 fw-bold">پیشنهاد شگفت انگیز</p></div>
+                <div class="row d-block d-lg-flex">
+                  <div class="col-12 col-lg-4 text-center"><img class="img-fluid" src="./img/a1.PNG" alt=""></div>
+                  <div class="col-12 col-lg-8 text-muted pad-ss px-3">
+                    <p class="text-dark text-end">گردنبند طلا 18 عیار زنانه</p>
+                    <div class=" row mt-2 py-1 text-center">
+                      <p class=" col-12 col-md-8 col-lg-9 text-dark text-end fw-bold">تومان7,900,000</p>
+                      <p class="col-5 col-md-3 col-lg-2 bg-danger text-white text-center text-end mr-2" style=" border-radius: 10px; right: 0;">8%</p>
+                      <p class="text-decoration-line-through text-end pb-2 mt--2">8,900,000</p>
+                      <div class="countdown text-danger text-sm text-start timer" id="timer2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="card bg-white col-5 text-muted justify-content-center text-center ">
+                <i class="fa-solid fa-lock text-lg"></i>
+                <p>شروع تخفیف از ساعاتی دیگر</p>
+              </section>
+            </div>
+          </div>
+
+
+            <div class="cat-scrol p-4 m-4" style="direction: rtl;">
+                <button class="sb sbl" id="sl"></button>
+                
+                <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">بهداشتی</div>
+                <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">پوشاک</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">تغذیه</div>
+                <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">لبنیات</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">اسبابازی</div>
+                <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">تنقلات</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">پوشاک</div>
+                <div class="item"><img src="./img/q1.png" alt="" class="img-fluid me-2">لوازم خانگی</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">لوستر</div>
+                <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">خوراکی</div>
+                <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">اتاق خواب</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">پوشاک</div>
+                <div class="item"><img src="./img/q1.png" alt="" class="img-fluid me-2">لوازم خانگی</div>
+                <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">لوستر</div>
+                <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">خوراکی</div>
+                <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">اتاق خواب</div>
+                <div class="item"><img src="./img/zz3.png" alt="" class="img-fluid me-2 h-100 w-100"></div>
+                <button class="sb sbr" id="sr">></button>
+              
+            </div>
+          </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <main class="main">
+      <div class="px-4 container-4xl-w mx-auto">
+
+          <div class="h-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                  viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+              </svg>
+              <h3 class="h-title__text text-h5">شگفت‌انگیزهای رو به اتمام</h3>
+          </div>
+          <div class=" h-products">
+              <div class="h-products-wrapper swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/smart.webp" alt="smart">
+                              <h3 class="h-product__title">سری شیرآلات ققنوس مدل مفصلی دوحالته Smart</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/cerm na.webp" alt="cerm">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/flash.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/artvina.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/aitoina.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/powerbank.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/speaker.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+          <div class="h-wonderful__percent bg-body-secondary mt-4 rounded-4 p-5 ">
+              <div class="h-wonderful__percent-one">
+                  <img src="./images/fresh.webp" alt="fresh">
+                  <img src="./images/fresh-incredible-offer.svg" alt="fresh fresh-incredible-offer" class="m-4 h-wonderful__percent-one__image-hypermarkrt">
+                  <span class="bg-success text-light px-4 py-3 fs-4 rounded-5 ">تا 66% تخفیف</span>
+              </div>
+
+              <div class="h-wonderful__percent-image-wrapper">
+                  <img src="./images/7ba4fff5126133fcf6dfd98ae1a4ac5ad415bbba_1716119059.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+                  <img src="./images/187cfae836357f3b2add2511f7e60f21a66e2a20_1687169767.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+                  <img src="./images/f3d4a58893737b5a77c5e8657b2f121c187d2ae6_1735978496.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+                  <img src="./images/a69cf42fbe6be681488ce11c3c763ce575b4842e_1619336001.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+                  <img src="./images/82c323ae435a9de3b2b00566ffc88fbc71401f6a_1619335436.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+                  <img src="./images/c8bc031409d9548ef55720283ada74215006f63e_1636988496.webp" alt=""
+                      class="h-wonderful__percent-image m-2 rounded-circle">
+              </div>
+              <span class=" btn-banner text-success bg-light px-md-5 py-4 rounded-5 fs-3 me-lg-2">بیش از 100 کالا <svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-left" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                  </svg></span>
+          </div>
+          <section class="h-product__banner">
+              <div class="wrapper">
+                  <div class="h-product__banner-image-wrapper">
+                      <img src="./images/earlyAccessTeasing.svg" alt="earlyAccessTeasing">
+                  </div>
+                  <div class="h-product__banner-time">
+                      <span class="h-product__banner-time__title">ویژه اعضای پلاس</span>
+                      <div class="h-product__banner-time-digital">
+                          <span class="h-product__banner-time-digital__second">
+                              <span class="fw-bold fs-4">33</span>
+                              <span>ثانیه</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__minute">
+                              <span class="fw-bold fs-4">27</span>
+                              <span>دقیقه</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__hour">
+                              <span class="fw-bold fs-4">12</span>
+                              <span>ساعت</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__info">مانده تا شروع
+                              <svg class="h-product__banner-time-digital__info-svg" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16"
+                                  viewBox="0 0 256 256" xml:space="preserve">
+
+                                  <defs>
+                                  </defs>
+                                  <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                      transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                      <path
+                                          d="M 37.267 41.251 c -0.249 1.047 0.268 2.116 1.233 2.594 c 1.543 0.765 2.511 2.474 2.213 4.305 l -2.516 15.471 c -0.306 1.88 0.97 3.652 2.85 3.958 h 0 c 2.783 0.453 5.627 0.25 8.308 -0.583 c 0.771 -0.24 1.354 -0.879 1.541 -1.664 l 0.427 -1.801 c 0.249 -1.047 -0.268 -2.116 -1.233 -2.594 c -1.543 -0.765 -2.511 -2.474 -2.213 -4.305 l 2.516 -15.471 c 0.306 -1.88 -0.97 -3.652 -2.85 -3.958 h 0 c -2.783 -0.453 -5.627 -0.25 -8.308 0.583 c -0.771 0.24 -1.354 0.879 -1.541 1.664 L 37.267 41.251 z"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                      <circle cx="47.093" cy="27.893" r="5.703"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform="  matrix(1 0 0 1 0 0) " />
+                                      <path
+                                          d="M 45 90 C 20.187 90 0 69.813 0 45 C 0 20.187 20.187 0 45 0 c 24.813 0 45 20.187 45 45 C 90 69.813 69.813 90 45 90 z M 45 7.098 C 24.101 7.098 7.098 24.101 7.098 45 S 24.101 82.902 45 82.902 S 82.902 65.899 82.902 45 S 65.899 7.098 45 7.098 z"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                  </g>
+                              </svg>
+                          </span>
+                      </div>
+
+                  </div>
+              </div>
+
+
+          </section>
+          <div class="h-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                  viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+              </svg>
+              <h3 class="h-title__text text-h5">شگفت‌انگیزهای رو به اتمام</h3>
+          </div>
+          <div class="h-products">
+              <div class="h-products-wrapper swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/smart.webp" alt="smart">
+                              <h3 class="h-product__title">سری شیرآلات ققنوس مدل مفصلی دوحالته Smart</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/cerm na.webp" alt="cerm">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/flash.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/artvina.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/aitoina.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/powerbank.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/speaker.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="h-product">
+                              <img src="./images/woderfullffer.svg" alt="woderfoul image">
+                              <img class="h-product_image" src="./images/matia.webp" alt="matia">
+                              <h3 class="h-product__title">کرم مرطوب کننده و آبرسان ماتیا مدل شیر گاو وزن 85 گرم</h3>
+                              <p class="h-product__caption">تنها ۱ عدد در انبار باقی مانده</p>
+                              <div class="h-product__info">
+                                  <span class="h-product__percent">30%</span>
+                                  <span class="h-product__price">29,000 <span>تومان</span></span>
+                              </div>
+                              <p class="h-product__pervious-price  text-start">42,240</p>
+                              <div class="h-product__line"></div>
+                              <div class="h-product__info-sold-product">
+                                  <span class="h-product__info-sold-product__percent">95% <span>فروش
+                                          رفته</span></span>
+                                  <span
+                                      class="h-product__info-sold-product__time text-danger fs-5 fw-semibold">37:00:54</span>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+          <section class="h-product__banner ">
+              <div class="wrapper">
+                  <div class="h-product__banner-image-wrapper">
+                      <img src="./images/earlyAccessTeasing.svg" alt="earlyAccessTeasing">
+                  </div>
+                  <div class="h-product__banner-time">
+                      <span class="h-product__banner-time__title">ویژه اعضای پلاس</span>
+                      <div class="h-product__banner-time-digital">
+                          <span class="h-product__banner-time-digital__second">
+                              <span class="fw-bold fs-4">33</span>
+                              <span>ثانیه</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__minute">
+                              <span class="fw-bold fs-4">27</span>
+                              <span>دقیقه</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__hour">
+                              <span class="fw-bold fs-4">12</span>
+                              <span>ساعت</span>
+                          </span>
+                          <span class="h-product__banner-time-digital__info">مانده تا شروع
+                              <svg class="h-product__banner-time-digital__info-svg" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16"
+                                  viewBox="0 0 256 256" xml:space="preserve">
+
+                                  <defs>
+                                  </defs>
+                                  <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                      transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                      <path
+                                          d="M 37.267 41.251 c -0.249 1.047 0.268 2.116 1.233 2.594 c 1.543 0.765 2.511 2.474 2.213 4.305 l -2.516 15.471 c -0.306 1.88 0.97 3.652 2.85 3.958 h 0 c 2.783 0.453 5.627 0.25 8.308 -0.583 c 0.771 -0.24 1.354 -0.879 1.541 -1.664 l 0.427 -1.801 c 0.249 -1.047 -0.268 -2.116 -1.233 -2.594 c -1.543 -0.765 -2.511 -2.474 -2.213 -4.305 l 2.516 -15.471 c 0.306 -1.88 -0.97 -3.652 -2.85 -3.958 h 0 c -2.783 -0.453 -5.627 -0.25 -8.308 0.583 c -0.771 0.24 -1.354 0.879 -1.541 1.664 L 37.267 41.251 z"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                      <circle cx="47.093" cy="27.893" r="5.703"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform="  matrix(1 0 0 1 0 0) " />
+                                      <path
+                                          d="M 45 90 C 20.187 90 0 69.813 0 45 C 0 20.187 20.187 0 45 0 c 24.813 0 45 20.187 45 45 C 90 69.813 69.813 90 45 90 z M 45 7.098 C 24.101 7.098 7.098 24.101 7.098 45 S 24.101 82.902 45 82.902 S 82.902 65.899 82.902 45 S 65.899 7.098 45 7.098 z"
+                                          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(156,61,201); fill-rule: nonzero; opacity: 1;"
+                                          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                  </g>
+                              </svg>
+                          </span>
+                      </div>
+
+                  </div>
+              </div>
+
+
+          </section>
+          <h2 class="mt-5 mb-5">همه شگفت‌انگیز‌ها</h2>
+          <div class="h-page-layout">
+              <div class="h-filter-sidebar">
+                  <h3 class="h-filter-sidebar__title">فيلترها</h3>
+                  <div class="h-filters-sidebar__section">
+                      <div class="h-filters-sidebar-brands">
+                          <h4 class="h-filters-sidebar-brands__title">برند </h4>
+                          <svg class="h-filters-sidebar-brands__chevron-down" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                              <path fill-rule="evenodd"
+                                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                                  clip-rule="evenodd" />
+                          </svg>
+
+                      </div>
+                      <div class="h-filters-sidebar-send">
+                          <h3 class="h-filters-sidebar-send__title">ارسال امروز
+                              <img class="h-filters-sidebar-send__image"
+                                  src="./images/262c38c0e4990522af759e0016a287508bbc84f6_1684761217.png"
+                                  alt="today send">
+                          </h3>
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                          </div>
+                      </div>
+                      <div class="h-filters-sidebar-send">
+                          <h3 class="h-filters-sidebar-send__title">فقط سوپر ماركتي
+                              <img class="h-filters-sidebar-send__image" src="./images/supermarket.svg"
+                                  alt="today send">
+                          </h3>
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                          </div>
+                      </div>
+                      <div class="h-filters-sidebar-send-costomer">
+                          <div class="h-filters-sidebar-send-costomer-right">
+                              <h3 class="h-filters-sidebar-send-costomer__title"> ارسال فروشنده
+                                  <img class="h-filters-sidebar-send-costomer__image" src="./images/customer.svg"
+                                      alt="today send">
+                              </h3>
+                              <p class="h-filters-sidebar-send-costomer-right__text">ارسال مستقیم و سریع‌تر</p>
+                          </div>
+
+
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                          </div>
+
+                      </div>
+                      <div class="h-filters-sidebar-range-prices">
+                          <h4 class="h-filters-sidebar-range-prices__title">محدوده قيمت ها </h4>
+                          <svg class="h-filters-sidebar-range-prices__chevron-down" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                              <path fill-rule="evenodd"
+                                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                                  clip-rule="evenodd" />
+                          </svg>
+
+                      </div>
+                      <div class="h-filters-sidebar-send">
+                          <h3 class="h-filters-sidebar-send__title"> فقط کالاهای موجود
+                              <img class="h-filters-sidebar-send__image" src="./images/supermarket.svg"
+                                  alt="today send">
+                          </h3>
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                          </div>
+                      </div>
+                      <div class="h-filters-sidebar-send">
+                          <h3 class="h-filters-sidebar-send__title">فقط کالاهای موجود در انبار دیجی‌کالا
+                              <img class="h-filters-sidebar-send__image" src="./images/supermarket.svg"
+                                  alt="today send">
+                          </h3>
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                          </div>
+                      </div>
+                      <div class="h-filters-sidebar-range-prices">
+                          <h4 class="h-filters-sidebar-range-prices__title"> نوع فروشنده </h4>
+                          <svg class="h-filters-sidebar-range-prices__chevron-down" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                              <path fill-rule="evenodd"
+                                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                                  clip-rule="evenodd" />
+                          </svg>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="h-products-grids">
+                  <div class="h-sorting-options">
+                      <div class="h-sorting-options-right">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+                          </svg>
+                          <h3 class="h-sorting-options__title">مرتب سازي :</h3>
+                          <a class="h-sorting-options__link" href="#">بیشترین تخفیف</a>
+                          <a class="h-sorting-options__link text-danger" href="#">پربازدیدترین</a>
+                          <a class="h-sorting-options__link" href="#">جدیدترین</a>
+                          <a class="h-sorting-options__link" href="#">پرفروش‌ترین‌</a>
+                          <a class="h-sorting-options__link" href="#">ارزان‌ترین</a>
+                          <a class="h-sorting-options__link" href="#">گران‌ترین</a>
+                          <a class="h-sorting-options__link" href="#">سریع‌ترین ارسال</a>
+                          <a class="h-sorting-options__link" href="#">پیشنهاد خریداران</a>
+                          <a class="h-sorting-options__link" href="#">منتخب</a>
+                      </div>
+
+
+
+                      <p class="h-sorting-options-SortBy365Items">365كالا</p>
+                  </div>
+                  <div class="h-products-grids-products">
+                      <div class="row">
+                          <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                              <div class="h-products-grids-product">
+                                  <div class=""><img class="h-products-grids-product__amazing-custom"
+                                          src="./images/incredible.svg" alt="amazing custom"></div>
+                                  <div class="h-products-grids-product__headphone__wrapper"><img
+                                          class="h-products-grids-product__headphone" src="./images/headphone.webp"
+                                          alt="headphone">
+                                  </div>
+                                  <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                                  <div class="h-products-grids-product__stock-rating-container">
+                                      <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                          ۳ عدد در انبار باقی مانده</span>
+                                      <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                              class="h-products-grids-product__stock-rating-container__star"><svg
+                                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                  class="size-6">
+                                                  <path fill-rule="evenodd"
+                                                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                      clip-rule="evenodd" />
+                                              </svg>
+                                          </span></span>
+                                  </div>
+                                  <div class="h-products-grids-product__discount-price-container">
+                                      <span
+                                          class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                      <span class="h-products-grids-product__discount-price-container__price">699,000
+                                          تومان</span>
+                                  </div>
+                                  <div class="h-products-grids-product__old-price-wrapper"><span
+                                          class="h-products-grids-product__old-price">2,990,000</span>
+                                  </div>
+                                  <div class="h-products-grids-product__timer-wrapper">
+                                      <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                                  </div>
+                              </div>
+                          </div>
+                      <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div><div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                          <div class="h-products-grids-product ml-3 flex flex-col items-center">
+                              <div class=""><img class="h-products-grids-product__amazing-custom" src="./images/incredible.svg"
+                                      alt="amazing custom"></div>
+                              <div class="h-products-grids-product__headphone__wrapper"><img class="h-products-grids-product__headphone"
+                                      src="./images/headphone.webp" alt="headphone">
+                              </div>
+                              <h2 class="h-products-grids-product__title">هدفون بلوتوثی مدل J9͏0-TWS-5.3</h2>
+                              <div class="h-products-grids-product__stock-rating-container">
+                                  <span class="h-products-grids-product__stock-rating-container__stock-text">تنها
+                                      ۳ عدد در انبار باقی مانده</span>
+                                  <span class="h-products-grids-product__stock-rating-container__rating"> 4<span
+                                          class="h-products-grids-product__stock-rating-container__star"><svg
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+                                              <path fill-rule="evenodd"
+                                                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                  clip-rule="evenodd" />
+                                          </svg>
+                                      </span></span>
+                              </div>
+                              <div class="h-products-grids-product__discount-price-container">
+                                  <span class="h-products-grids-product__discount-price-container__discount">77%</span>
+                                  <span class="h-products-grids-product__discount-price-container__price">699,000
+                                      تومان</span>
+                              </div>
+                              <div class="h-products-grids-product__old-price-wrapper"><span
+                                      class="h-products-grids-product__old-price">2,990,000</span>
+                              </div>
+                              <div class="h-products-grids-product__timer-wrapper">
+                                  <span class="h-products-grids-product__timer" data-time="300">02:20:09</span>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+  </main>
+  <footer>
+    <div class="m-firstcontainer flex flex-row justify-space-between">
+      <div class="m-logo">
+        <img
+          src="https://www.digikala.com/brand/full-horizontal.svg"
+          alt=""
+        />
+      </div>
+      <div class="m-upbutton">
+        <button class="flex flex-row nowrap">
+          <div> بازگشت به بالا</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="currentColor"
+            height="1.5em"
+            width="1.5em"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 15.75 7.5-7.5 7.5 7.5"
+            />
+          </svg>
+          
+        </button>
+      </div>
+    </div>
+    <div class="m-Description">
+      <!-- وقتی سایز دسکتاب بیشتر از 1024 -->
+      <div class="m-Description-container-desktop flex">
+        <p> تلفن پشتیبانی ۶۱۹۳۰۰۰۰ - ۰۲۱</p>
+        <div class="m-Midfield">|</div>
+        <p>۰۲۱-۹۱۰۰۰۱۰۰</p>
+        <div class="m-Midfield">|</div>
+        <p>۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم</p>
+      </div>
+
+      <!-- سایز دسکتاپ کمتر از 1023 -->
+      <div>
+        <div class="m-first-line ">
+          <div class="m-first-line-right flex flex-row">
+            <div class="m-first-line-right-icon">
+              <i class="fas fa-headphones"></i>
+            </div>
+            <div class="m-first-line-right-Support flex flex-col">
+              <span class="m-first-line-right-Support-call">تماس با پشتیبانی</span>
+              <span class="m-first-line-right-Support-time">۷ روز هفته، ۲۴ ساعت</span>
+            </div>
+          </div>
+          <a href="#" class="m-first-line-left">
+            <div>تماس</div>
+          </a>
+        </div>
+        
+      
+        <div class="m-second-line flex  flex-row">
+          <div class="m-second-line-right flex flex-row">
+            <div class="m-second-line-right-icon">
+              <img src="https://www.digikala.com/statics/img/png/footerlogo2.webp" alt="">
+            </div>
+            <div class="m-second-line-right-digi flex flex-col">
+              <span class="m-second-line-right-digi-app">اپلیکیشن دیجی‌کالا</span>
+              <span class="m-second-line-right-digi-experience">تجربه خرید بهتر در</span>
+            </div>
+          </div>
+          <button class="m-second-line-left">
+            <div>دانلود</div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- منوی آکاردونی-->
+
+    <div class="accordion Accordion-menu" id="accordionExample">
+      <div class="accordion-item Accordion-menu-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f-accordion" aria-expanded="true" aria-controls="f-accordion">
+            با دیجی کالا
+          </button>
+        </h2>
+        <div id="f-accordion" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="m-accordion-list">
+            <a href="#">اتاق خبر دیجی کالا</a>
+            <a href="#">فروش در دیجی کالا</a>
+            <a href="#">فرصت های شغلی</a>
+            <a href="#">گزارش تخلف در دیجی کالا</a>
+            <a href="#">تماس با دیجی کالا</a>
+            <a href="#"> درباره دیجی کالا</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item Accordion-menu-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s-accordion" aria-expanded="false" aria-controls="s-accordion">
+            خدمات مشتریان
+          </button>
+        </h2>
+        <div id="s-accordion" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="m-accordion-list">
+            <a href="#">پاسخ به پرسش های متداول</a>
+            <a href="#">رویه های بازگرداندن کالا</a>
+            <a href="#">شرایط استفاده</a>
+            <a href="#">حریم خصوصی</a>
+            <a href="#">گزارش باگ</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item Accordion-menu-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#t-accordion" aria-expanded="false" aria-controls="t-accordion">
+            راهنمای خرید از دیجی کالا
+          </button>
+        </h2>
+        <div id="t-accordion" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="m-accordion-list">
+            <a href="#">نحوه ثبت سفارش</a>
+            <a href="#">رویه ارسال سفارش</a>
+            <a href="#">شیوه های پرداخت</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- منوی آکاردونی-->
+
+    <div class="m-Services flex flex-row">
+      <div>
+        <a href="#"
+          ><img
+            src="https://www.digikala.com/statics/img/svg/footer/express-delivery.svg"
+            alt="تحویل اکسپرس"
+            class="m-Services-img"
+          />
+          <p class="m-services-Explanation">امکان تحویل اکسپرس</p>
+        </a>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://www.digikala.com/statics/img/svg/footer/cash-on-delivery.svg"
+            alt="پرداخت در محل"
+            class="m-Services-img"
+          />
+          <p class="m-services-Explanation">امکان پرداخت در محل</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img
+            src="https://www.digikala.com/statics/img/svg/footer/support.svg"
+            alt="تمامی ساعات"
+            class="m-Services-img"
+          />
+          <p dir="rtl" class="m-services-Explanation">7 روز هفته ،24 ساعته</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img
+            src="https://www.digikala.com/statics/img/svg/footer/days-return.svg"
+            alt="ضمانت بازگشت کالا"
+            class="m-Services-img"
+          />
+          <p class="m-services-Explanation">هفت روز ضمانت بازگشت کالا</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img
+            src="https://www.digikala.com/statics/img/svg/footer/original-products.svg"
+            alt="ًضمانت اصل بودن"
+            class="m-Services-img"
+          />
+          <p class="m-services-Explanation">ضمانت اصل بودن کالا</p>
+        </a>
+      </div>
+    </div>
+    <div class="m-data-Digikala flex flex-row justify-space-between">
+      <div class="m-About-DigiKala flex flex-col">
+        <p class="m-About-DigiKala-title">با دیجی کالا</p>
+        <a href="#" class="m-font-size">اتاق خبر دیجی کالا</a>
+        <a href="#" class="m-font-size">فروش در دیجی کالا</a>
+        <a href="#" class="m-font-size">فرصت های شغلی</a>
+        <a href="#" class="m-font-size">گزارش تخلف در دیجی کالا</a>
+        <a href="#" class="m-font-size">تماس با دیجی کالا</a>
+        <a href="#" class="m-font-size">درباره دیجی کالا</a>
+      </div>
+      <div class="m-Customer-service flex flex-col">
+        <p class="m-About-DigiKala-title">خدمات مشتریان</p>
+        <a href="#" class="m-font-size">پاسخ به پرسش های متداول</a>
+        <a href="#" class="m-font-size">رویه های بازگرداندن کالا</a>
+        <a href="#" class="m-font-size">شرایط استفاده</a>
+        <a href="#" class="m-font-size">حریم خصوصی</a>
+        <a href="#" class="m-font-size">گزارش باگ</a>
+      </div>
+      <div class="m-Shopping-Guide flex flex-col">
+        <p class="m-About-DigiKala-title">راهنمای خرید از دیجی‌کالا</p>
+        <a href="#" class="m-font-size"> نحوه ثبت سفارش </a>
+        <a href="#" class="m-font-size">رویه ارسال سفارش</a>
+        <a href="#" class="m-font-size">شیوه های پرداخت</a>
+      </div>
+      <div class="m-Communication flex flex-col">
+        <p class="m-About-DigiKala-title">همراه ما باشید!</p>
+        <div class="m-icon flex justify-space-between">
+          
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-whatsapp"></i>
+
+          
+        
+        </div>
+        <p>با ثبت ایمیل، از جدید‌ترین تخفیف‌ها با‌خبر شوید</p>
+        <div class="m-input flex flex-row justify-space-between">
+          <input type="email" placeholder="ایمیل شما" class="m-email-input" />
+          <input type="submit" value="ثبت"/>
+        </div>
+      </div>
+    </div>
+
+    <section class="m-blue-section">
+      <div>
+        <img src="https://www.digikala.com/statics/img/png/footerlogo2.webp" alt="" class="m-blue-logo">
+        <p class="m-blue-section-title">دانلود اپلیکیشن دیجی کالا</p>
+      </div>
+      <div class="m-apps flex">
+        <a href="#"><img src="https://www.digikala.com/statics/img/svg/appStores/coffe-bazzar.svg" alt="بازار" class="m-bazar">
+        <a href="#"><img src="https://www.digikala.com/statics/img/svg/appStores/myket.svg" alt="مایکت"></a>
+        <a href="#"><img src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg" alt="سیب اپ"></a>
+        <a href="#"><img src="https://www.digikala.com/statics/img/svg/More.svg" alt="ETC..." class="m-etc"></a>
+      </div>
+    </section>
+    <div class="m-Digikala-Online-Store flex flex-row">
+      <div class="m-in-digikala">
+        <p class="m-Digikala-Online-Store-title">  فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</p>
+        <div class="m-Digikala-Online-Store-Description justify-space-between">
+          <p>یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمان ی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود را داشته باشد.</p>
+          <span id="m-more">
+          <p>یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا یا هر فروشگاه‌ اینترنتی دیگری، این است که کالای خریداری شده چه زمانی به دستشان می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با فروشنده کالا،‌ مقصد کالا و همچنین نوع کالا در اختیار کاربران خود قرار می‌دهد. هر یک از روش های ارسال دیجی کالا شرایط و ویژگی‌های خاص خود را دارند که ممکن است گاهی برای کاربران جدید، مبهم و پیچیده به نظر برسند. برای آگاهی بیشتر مشتریان از خدمات دیجی‌کالا، این فروشگاه اینترنتی در بخشی از وب‌سایت خود راهنمای کاملی از شیوه‌‌های ارسال را به صورت ساده و به دور از پیچیدگی، قرار داده است که شامل 8 نوع ارسال کالا به روش‌های زیر است: ارسال امروز، دریافت حضوری، دریافت از گنجه، ارسال توسط فروشنده، ارسال عادی، ارسال کالاهای بزرگ، سنگین و فوق سنگین، ارسال سریع سوپرمارکتی، ارسال با پست</p>
+          <p>کدام محصولات در دیجی‌کالا قابل سفارش هستند؟</p>
+          <p>تقریبا می‌توان گفت محصولی وجود ندارد که دیجی‌کالا برای مشتریان خود در سراسر کشور فراهم نکرده باشد. شما می‌توانید در تمامی روزهای هفته و تمامی شبانه روز دیجی‌کالا که محصولات دارای تخفیف عالی می‌شوند، سفارش خود را به سادگی ثبت کرده و در روز و محدوده زمانی مناسب خود، درب منزل تحویل بگیرید. بعضی از گروه‌های اصلی و زیر مجموعه‌های پرطرفدار محصولات دیجی‌کالا شامل مواردی می‌شود که در ادامه به معرفی آن‌ها می‌پردازیم که امکان ارسال امروز برای آن ها وجود دارد. </p>
+          <p>دیجی کالا در جشنواره‌های سالیانه خود به طور معمول روی تمام دسته بندی‌های کالایی تخفیف‌های عالی قرار‌می‌دهد. به عنوان مثال در زمان بلک فرایدی یا حراج جمعه سیاه، در این سال‌ها بیشترین درصد تخفیف در اختیار مشتریان دیجی‌کالا قرار گرفته‌است و شامل دسته بندی های مختلف از موبایل و لپ تاپ تا عطر و لباس و حتی غذای حیوانات خانگی بوده‌است. </p>
+          <p>کالای دیجیتال</p>
+          <p>انواع گوشی موبایل از برندهای مختلفی مثل آیفون،  گوشی سامسونگ، گوشی نوکیا، گوشی شیائومی، گوشی هواوی، و...، انواع کنسول بازی ps4 و ps5، انواع تبلت‌های پرطرفدار مثل تبلت سامسونگ نوت 10، انواع هندزفری مثل هندزفری بی سیم، تلوزیون از برندهای مختلف مثل تلویزیون سامسونگ، سونی و...، انواع مانیتور، کیس، کیبورد، مودم از برندهای مختلف مثل مودم ایرانسل، آنتن و ... تنها بخشی از محصولاتی هستند که زیر مجموعه کالای دیجیتال در دیجی‌کالا قرار دارند.</p>
+          <p>خودرو، ابزار و تجهیزات صنعتی</p>
+          <p>انواع خودروهای ایرانی و خارجی از برندهای مطرحی مثل هوندا، کیا و...، موتور سیکلت از برندهایی مثل کویر موتور و...، لوازم جانبی خودرو مثل سیستم صوتی تصویر، ضبط و...، لوازم یدکی مثل دیسک و صفحه کلاج و... و لوازم مصرفی خودرو مثل کفپوش سانا در این گروه قرار می‌گیرند.</p>
+          <p>مد و پوشاک</p>
+          <p>محصولاتی مثل انواع لباس مثل لباس مجلسی زنانه و مردانه، لباس راحتی، لباس ورزشی، اکسسوری، کیف، کفش، عینک آفتابی، لباس زیر، شال و روسری و... جزو مواردی هستند که می‌توانید آن‌ها را از برندهای مطرح ایرانی و خارجی موجود در دیجی کالا مثل آدیداس، نایکی، دبنهامز، آلدو، درسا و... خریداری کنید.</p>
+          <p>اسباب بازی کودک و نوزاد</p>
+          <p>در این دسته از کالاهای دیجی‌کالا، انواع لوازم بهداشتی و حمام کودک و نوزاد، انواع پوشاک و کفش، تبلت، اسباب‌بازی، لوازم اتاق خواب کودک، لوازم ایمنی، لوازم شخصی و غذا خوری و ... قرار می‌گیرد تا خرید را برای پدر و مادرها به کاری سریع و آسان تبدیل کند.</p>
+          <p>کالاهای سوپر مارکتی</p>
+          <p>هر چیزی از مواد خوراکی که به آن نیاز دارید، در سوپرمارکت دیجی‌کالا پیدا می‌شود، محصولات پرطرفداری مثل کره بادام‌زمینی، عسل، سس، قهوه، زعفران، شکلات، انواع نان و ... از برندهای معتبر و معروفی مثل نستله، نوتلا، استارباکس، مزمز، چی توز و ... همگی در اختیار شما هستند و تا رسیدن به آشپزخانه شما تنها چند کلیک فاصله دارند.</p>
+          <p class="Subtext-title">  زیبایی و سلامت  </p>
+          <p>انواع لوازم آرایش مثل لاک، رنگ مو، لوازم آرایش لب، چشم، صورت و... همگی در دیجی‌کالا موجود هستند. همچنین محصولات بهداشتی مثل انواع شامپو، کرم ضد آفتاب، ماسک صورت، ضد تعریق، ماسک مو  و...، انواع لوازم شخصی برقی، ست هدیه، بهترین انواع عطر و اسپری، کرم پودر، ریمل و رژلب وانواع زیورآلات طلا و نقره مثل سرویس طلا، سرویس نقره و... به همراه وسایل مراقبت شخصی طبی در گروه زیبایی و سلامت دیجی‌کالا قرار می‌گیرد. در این بخش برندهای مطرحی مثل اسنس، پنبه ریز، سینره و... حضور دارند.همچنین میتوانید انواع مکمل غذایی و دارویی مثل داروی مناسب سرماخوردگی را در دیجی کالا تهیه کنید.</p>
+          <p>خانه و آشپزخانه</p>
+          <p>یکی از متنوع‌ترین بخش‌های دیجی‌کالا، بخش لوازم خانه و آشپزخانه است که از محصولاتی مثل صندلی گیمینگ در بخش صندلی‌ها گرفته تا انواع مبل راحتی، انواع آبگرمکن مثل آبگرمکن بوتان، لباسشویی‌های متنوع مثل انواع لباسشویی اسنوا، شیرآلات مختلف مثل شیرآلات قهرمان و...، ظروف و همچنین لوازم برقی آشپزخانه مثل توستر و... را شامل می‌شود و امکان خریدی عالی را برای مشتریان فراهم کرده است. در بخش لوازم خانگی دیجی‌کالا، برندهای معتبری مثل تفال، اخوان، فیلیپس، ال جی، اسنوا، جی پلاس و... حضور دارند.</p>
+          <p>کتاب، لوازم تحریر و هنر</p>
+          <p>بخش هنر، کتاب، رمان و لوازم تحریر دیجی‌کالا نیز یکی از متنوع‌ترین بخش‌های این فروشگاه اینترنتی است. انواع کتاب و مجله، کتاب زبان، بازی، لوازم تحریر با طرح‌های مختلف مانند دختر کفشدوزکی، سازهایی مثل پیانو، سنتور، هنگ درام  و... با بهترین قیمت‌ها و از بهترین برندها در دسترس شما قرار دارند.</p>
+          <p>ورزش و سفر</p>
+          <p>هر نوع وسیله و لباس ورزشی که فکرش را کنید، انواع وسایل کمپینگ و کوهنوردی، ساک و قمقمه ورزشی و وسایل سفر اربعین و... در این بخش قرار می‌گیرند. همچنین شما می‌توانید وسایل مد نظر خود را بر اساس نوع ورزش (آبی، هوازی، بدنسازی و...) در دسته‌بندی‌های دیجی‌کالا پیدا کنید.</p>
+          <p>محصولات بومی و محلی</p>
+          <p>و در آخر دیجی‌کالا از طریق به فروش رساندن محصولات بومی و سنتی متفاوتی مثل انواع خوراکی، گلیم و گبه، ابزار و ... تلاش کرده تا بین هنر ایرانی و متقاضیان آن کوتاه‌ترین راه را پیدا کند. در این بخش شما می‌توانید انواع محصولات از جمله ظروف زیبای مخصوص به سفره هفت‌سین  و پذیرایی از مهمانان در روزهای نوروز، انواع آیینه و شمعدان و هر آن چیزی را که برای خلق زیبایی در روزهای بهاری به آن نیاز دارید، با قیمت مناسب و تنوع بسیار بالا انتخاب کنید. همچنین در صفحه برچسب ها، امکان مشاهده و خرید انواع محصولات با طرح های بومی وجود دارد.  دیجی‌کالا همچنین برای اینکه حال و هوای عید را به اعضای خود هدیه کند، تقویم ۱۴۰۱، انواع ایده عکس پروفایل عید نوروز، آهنگ‌های عید نوروز و موزیک‌های شاد بهاری، وسایل مربوط به خانه‌تکانیی و انواع لباس های عید  را برای شما فراهم کرده است تا بتوانید در کنار خرید خود، از این حال و هوای تازه نهایت لذت را ببرید.</p>
+        </span>
+
+          <a href="#" class="m-more-btn" >  مشاهده بیشتر <i class="fa fa-angle-left" aria-hidden="true"></i>  </a>
+
+        </div>
+      </div>
+              <div class="Digikala-trust-symbols flex">
+        <a href="#"><img src="https://www.digikala.com/statics/img/png/rezi.webp" alt=""></a>
+        <a href="#"><img src="https://www.digikala.com/statics/img/png/kasbokar.webp" alt=""></a>
+        <a href="#"> <img src="https://www.digikala.com/statics/img/png/rezi.webp" alt=""></a>
+      </div>
+    </div>
+  </footer>
+   <script src="main.js"></script>
+   <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="scroller"></div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://kit.fontawesome.com/1a13838972.js" crossorigin="anonymous"></script>
+    <script src="./ability.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // تابع برای شروع تایمر
+      function startTimer(duration, display1, display2) {
+          let timer = duration, minutes, seconds;
+          setInterval(function () {
+              minutes = parseInt(timer / 60, 10);
+              seconds = parseInt(timer % 60, 10);
+  
+              // افزودن صفر به عددهای کمتر از 10
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+              display1.textContent = minutes + ":" + seconds;
+              display2.textContent = minutes + ":" + seconds;
+  
+              if (--timer < 0) {
+                  timer = duration;
+              }
+          }, 1000);
+      }
+  
+      window.onload = function () {
+          // مدت زمان تایمر به ثانیه
+          let duration = 60 * 5; // 5 دقیقه
+          let display1 = document.querySelector('#timer1');
+          let display2 = document.querySelector('#timer2');
+          startTimer(duration, display1, display2);
+      };
+  </script>
+
+    <!-- <script>
+      const sb = document.getElementById("ss");
+      const sbl = document.getElementById("sl");
+      const sbr = document.getElementById("sr");
+      sbl.addEventListener("click", ()=>{
+        sb.scrollBy({
+          left: -200,
+          behavior:"smooth"
+        });
+      });
+      sbr.addEventListener("click", ()=>{
+        sb.scrollBy({
+          left: 200,
+          behavior:"smooth"
+        });
+      });
+    </script> -->
+
+  </body>
+</html>

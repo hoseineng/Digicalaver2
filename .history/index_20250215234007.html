@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 1130px) {
+          .header1 {
+            display: none; /* مخفی کردن هدر در موبایل */
+          }
+          .header2 {
+            display: none; /* مخفی کردن هدر در موبایل */
+          }
+      }
+  
+      @media (min-width: 1130px) {
+        .header1 {
+          position: sticky;
+          top: 0;
+          z-index: 1000; /* برای اطمینان از اینکه هدر بالای سایر المان‌ها نمایش داده بشه */
+          padding-top: 40px;
+        }
+        .header2 {
+          padding-top: 30px;
+        }
+        .nav-l{
+            display: none;
+          }
+      }
+  
+  
+  
+        @media (max-width:400px) {
+          .font-x-smaller{
+            font-size: xx-small;
+          }
+          .pad-ss{
+            padding: 20px;
+          }
+          .penhan{
+            display: none;
+          }
+        }
+          
+        
+        @media (max-width: 800px){
+          .font-smaller{
+            font-size: small;
+          }
+          .h-slider{
+            height: 300px;
+          }
+        }
+  
+        #ali p{
+          padding: 0px 5px;
+        }
+        .cat-scrol{
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 15px;
+          -webkit-overflow-scrolling: touch;
+          cursor: pointer;
+        }
+        .item{
+          display: block;
+          flex-shrink: 0;
+          width: 120px;
+          height: 170px;
+          text-align: center;
+          scroll-snap-align: center;
+        }
+        .item img{
+          width: 100%;
+          height: 130px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        .cat-scrol::-webkit-scrollbar{
+          display: none;
+        }
+        .sb{
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          /* top: 50%;
+          transform: translateY(-50%); */
+          color: black;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          z-index: 10;
+        }
+        .sbl{
+          left: 0;
+        }
+        .sbr{
+          right: 0;
+        }
+  
+      </style>
+</head>
+<body class="body" >
+  <div class="container">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-white text-dark nav-l">
+          <div class="container">
+            <div class=" text-center px-1 col-4" style="font-size: small; padding: 5px; border: 1px solid rgb(116, 116, 116); border-radius: 7px; margin: 5px; ">ثبت نام | ورود <i class="fa-solid fa-right-to-bracket"></i></div>
+              <img class=" col-4 img-fluid" src="./img/111.PNG" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="نمایش منو">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">خانه</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">درباره ما</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">خدمات</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">تماس با ما</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+
+        <div class=" header1">
+          <div class="navbar d-flex p-2 bg-white text-muted" style="position: fixed;top: 0; left: 0;right:0;z-index:1000; ">
+            <div class="col-4 d-flex text-center" style="display: flex; align-items: center;left: 0;">
+              <i class="fa-solid fa-cart-shopping text-xlg"></i>
+              <p style="padding-right: 20px;padding-left: 20px;bottom: 10px;">|</p>
+              <div class=" text-center px-4" style="font-size: medium; padding: 6px; border: 1px solid rgb(116, 116, 116); border-radius: 7px; margin: 5px; ">ثبت نام | ورود <i class="fa-solid fa-right-to-bracket "></i></div>
+            </div>
+            <div class=" col-6 text-end border-radius border-light bg-light p-2" style="border-radius: 8px;">جستوجو<i class="fa-solid fa-magnifying-glass px-3"></i></div>
+            <img class=" col-2" src="./img/111.PNG" alt="">
+          </div>
+        </div>
+      </div>
+        <div class="header2">
+          <div class="d-flex text-dark">
+            <div class="col-2 text-center font-smaller" style="background-color: antiquewhite; padding: 5px;  border-radius: 20px; margin: 5px; left: 20px; color: rgb(255, 72, 0);">شهر خود را انتخاب کنید<i class="fa-solid fa-location-dot px-2"></i></div>
+            <div id="ali" class=" d-flex col-10 text-start text-muted" style="text-align: center; justify-content: right;">
+              <p> در دیجی کالا بفروشید </p>
+              <p> سوالی دارید؟ </p>
+              <p> | </p>
+              <p> پرفروش ترین ها <i class="fa-solid fa-fire"></i></p>
+              <p> طلای دیجیتال <i class="fa-solid fa-coins"></i></p>
+              <p> سوپر مارکت <i class="fa-solid fa-basket-shopping"></i></p>
+              <p> شگفت انگیز ها <i class="fa-solid fa-percent"></i></p>
+              <p> | </p>
+              <p>دسته بندی کالاها<i class="fa-solid fa-bars"></i></p>
+            </div>
+          </div>
+        </div>
+          <div class="text-white bg-danger py-3 text-center row mt-0">
+              <section class="col-2 justify-content-center alig-items-center"><i class="fa-solid fa-magnifying-glass fa-shake"></i></section>
+              <section class="col-8 justify-content-center alig-items-center text-xxlg">پیشنهاد شگفت انگیز</section>
+              <section class="col-2 justify-content-center alig-items-center"><i class="fa-solid fa-arrow-right fa-fade"></i></section>
+          </div>
+          <div id="carouselExample" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="rounded carousel-item active">
+                    <img src="./img/1.jpg" class="d-block w-100 h-slider img-fluid" alt="تصویر 1">
+                </div>
+                <div class="rounded carousel-item">
+                    <img src="./img/2.jpg" class="d-block w-100 h-slider img-fluid" alt="تصویر 2">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">قبلی</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">بعدی</span>
+            </button>
+          </div>
+      </header>
+      <main>
+        <div class="bg-danger p-2 p-lg-4">
+          <div class="text-white text-end p-2 p-lg-4 fw-bold text-lg">شگفت انگیز امروز<i class="fa-regular fa-star fa-bounce"></i></div>
+          <div class="text-end d-flex cat-scrol text-end" style="direction: rtl;">
+            <div class="card col-5 m-1 m-md-2 p-1 p-lg-2 font-smaller font-x-smaller">
+              <div><p class="text-danger text-end font-weight-bold pt-2 pr-3 fw-bold">پیشنهاد شگفت انگیز</p></div>
+              <div class="row d-block d-lg-flex">
+                <div class="col-12 col-lg-4 text-center"><img class="img-fluid" src="./img/a1.PNG" alt=""></div>
+                <div class="col-12 col-lg-8 text-muted pad-ss px-3">
+                  <p class="text-dark text-end">گردنبند طلا 18 عیار زنانه</p>
+                  <div class=" row mt-2 py-1 text-center">
+                    <p class=" col-12 col-md-8 col-lg-9 text-dark text-end fw-bold">تومان7,900,000</p>
+                    <p class="col-5 col-md-3 col-lg-2 bg-danger text-white text-center text-end mr-2" style=" border-radius: 10px; right: 0;">8%</p>
+                    <p class="text-decoration-line-through text-end pb-2 mt--2">8,900,000</p>
+                    <div class="countdown text-danger text-sm text-start timer" id="timer1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card col-5 m-1 m-md-2 p-1 p-lg-2 font-smaller font-x-smaller">
+              <div><p class="text-danger text-end font-weight-bold pt-2 pr-3 fw-bold">پیشنهاد شگفت انگیز</p></div>
+              <div class="row d-block d-lg-flex">
+                <div class="col-12 col-lg-4 text-center"><img class="img-fluid" src="./img/a1.PNG" alt=""></div>
+                <div class="col-12 col-lg-8 text-muted pad-ss px-3">
+                  <p class="text-dark text-end">گردنبند طلا 18 عیار زنانه</p>
+                  <div class=" row mt-2 py-1 text-center">
+                    <p class=" col-12 col-md-8 col-lg-9 text-dark text-end fw-bold">تومان7,900,000</p>
+                    <p class="col-5 col-md-3 col-lg-2 bg-danger text-white text-center text-end mr-2" style=" border-radius: 10px; right: 0;">8%</p>
+                    <p class="text-decoration-line-through text-end pb-2 mt--2">8,900,000</p>
+                    <div class="countdown text-danger text-sm text-start timer" id="timer2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="card bg-white col-5 text-muted justify-content-center text-center ">
+              <i class="fa-solid fa-lock text-lg"></i>
+              <p>شروع تخفیف از ساعاتی دیگر</p>
+            </section>
+          </div>
+        </div>
+
+
+          <div class="cat-scrol p-4 m-4" style="direction: rtl;">
+              <button class="sb sbl" id="sl"></button>
+              
+              <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">بهداشتی</div>
+              <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">پوشاک</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">تغذیه</div>
+              <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">لبنیات</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">اسبابازی</div>
+              <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">تنقلات</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">پوشاک</div>
+              <div class="item"><img src="./img/q1.png" alt="" class="img-fluid me-2">لوازم خانگی</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">لوستر</div>
+              <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">خوراکی</div>
+              <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">اتاق خواب</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">پوشاک</div>
+              <div class="item"><img src="./img/q1.png" alt="" class="img-fluid me-2">لوازم خانگی</div>
+              <div class="item"><img src="./img/q4.png" alt="" class="img-fluid me-2">لوستر</div>
+              <div class="item"><img src="./img/q2.png" alt="" class="img-fluid me-2">خوراکی</div>
+              <div class="item"><img src="./img/q3.png" alt="" class="img-fluid me-2">اتاق خواب</div>
+              <div class="item"><img src="./img/zz3.png" alt="" class="img-fluid me-2 h-100 w-100"></div>
+              <button class="sb sbr" id="sr">></button>
+            
+          </div>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  -->
+  <script src="https://kit.fontawesome.com/1a13838972.js" crossorigin="anonymous"></script>
+  <script src="./ability.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // تابع برای شروع تایمر
+    function startTimer(duration, display1, display2) {
+        let timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            // افزودن صفر به عددهای کمتر از 10
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display1.textContent = minutes + ":" + seconds;
+            display2.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // مدت زمان تایمر به ثانیه
+        let duration = 60 * 5; // 5 دقیقه
+        let display1 = document.querySelector('#timer1');
+        let display2 = document.querySelector('#timer2');
+        startTimer(duration, display1, display2);
+    };
+</script>
+
+  <!-- <script>
+    const sb = document.getElementById("ss");
+    const sbl = document.getElementById("sl");
+    const sbr = document.getElementById("sr");
+    sbl.addEventListener("click", ()=>{
+      sb.scrollBy({
+        left: -200,
+        behavior:"smooth"
+      });
+    });
+    sbr.addEventListener("click", ()=>{
+      sb.scrollBy({
+        left: 200,
+        behavior:"smooth"
+      });
+    });
+  </script> -->
+
+</body>
+</html>

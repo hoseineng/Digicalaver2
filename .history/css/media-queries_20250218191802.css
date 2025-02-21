@@ -1,0 +1,125 @@
+@media(max-width:1023px){
+    body {
+        overflow-x: hidden;
+      }
+    .m-logo{
+        display: none;
+    }
+    .m-upbutton{
+        margin-top: 0.94rem;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .m-upbutton button{
+        border:none;
+        color:var(--up-button-color);
+        background: none;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .m-upbutton button div{
+        font-size: 0.8rem;
+    }
+    .m-upbutton button svg{
+        color:var(--up-button-color);
+        font-weight:900;
+        margin-right: 5px;
+    }
+   .m-first-line,
+   .m-second-line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.m-first-line-right-icon i{
+    padding: 10px;
+    border-radius:50%;
+    margin-left: 15px;
+    color:var(--mediaq-title);
+    background-color: var(--bg-item-color);
+}
+.m-first-line-right-Support-call,
+.m-second-line-right-digi-app{
+    font-size: 1.4rem;
+    color: var(--mediaq-title);
+}
+.m-first-line-right-Support-time,
+.m-second-line-right-digi-experience{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:var(--secondary-color)
+}
+.m-first-line-left div,
+.m-second-line-left{
+    padding: 10px;
+    font-size: .7rem;
+    border-radius:50px;
+    color:var(--mediaq-title);
+    background-color: var(--bg-item-color);
+    border:none;
+}
+.m-second-line{
+    margin-top: 20px;
+}
+.m-second-line-right-icon img{
+  width: 35px;
+  border-radius:50%;
+  margin-left: 15px;
+}
+.m-Description{
+   margin-bottom: 15px;
+}
+.m-accordion-list{
+  display: flex;
+  flex-direction: column;
+}
+.accardion-title{
+  font-size: 1.4rem;
+}
+.m-accordion-list a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  margin: 10px;
+  font-size: 1rem;
+}
+.m-Digikala-Online-Store{
+  display: inline;
+}
+.m-Digikala-Online-Store-title{
+  font-size:1.2rem;
+  font-weight: 600;
+  word-spacing: 3px;
+  margin: 10px 0;
+}
+.m-Digikala-Online-Store-Description{
+  font-size: 1rem;
+}
+.m-more-btn{
+  color:rgb(161, 163, 168) !important;
+}
+.Accordion-menu-item{
+  border: none !important;
+  border-bottom:1px solid rgba(245, 245, 245) !important;
+}
+.m-Services,
+.m-data-Digikala,
+.m-apps,
+.Digikala-trust-symbols,
+.m-blue-section,
+.m-Description-container-desktop{
+   display:none;   
+}
+}
+@media (min-width:1024px) {
+.m-phone-icon,
+.m-black-line,
+.m-call,
+.Accordion-menu,
+.m-first-line,
+.m-second-line{
+   display:none;
+}
+}   

@@ -1,0 +1,958 @@
+
+@import"reset.css";
+@import"grid.css";
+@import"font.css";
+
+:root{
+  --color-primary:#ef394e;
+  --color-title-product:#3f4064;
+  --color-icon-rating:#f9bc00;
+  --color-white:#fff;
+  --color-bg-discount:#d32f2f;
+  --color-text-price:#3f4064;
+  --primary-color:#3f4064;
+  --secondary-color:#81858b;
+  --line-color:#a1a3a8;
+  --background-color:#fafafa;
+  --border-color:#e0e0e2;
+  --up-button-color:#19bfd3;
+  --bg-item-color:#f2f2f2;
+  --mediaq-title:#424750;
+  --input-bg-color:#f0f0f1;
+  --color-link-nav:#62666d;
+}
+
+/* 
+--Reset Css--
+*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 
+--Components
+*/
+
+
+/* 
+---Helper Class---
+ */
+
+ /* 
+ --App--
+ */
+ html{
+    font-size: 62.5%;
+ }
+ @font-face {
+    font-family: 'IranYekan';
+    src: url('../fonts/iran-yekan-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('/font/Yekan.woff2') format('woff2'),
+       url('/font/Yekan.woff') format('woff'),
+       url('/font/Yekan.eot') format('eot'),
+       url('/font/Yekan.svg') format('svg');
+}
+ body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+   }
+   /* 
+   =======
+      Header   
+   =======   
+   */
+   #ali a{
+    color: var(--color-link-nav);
+    cursor: pointer;
+    position: relative;
+   }
+   #ali a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 24px;
+    right: 11px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    transition: all .3s ease-in;
+   }
+   #ali a:hover::after{
+    width: 80%;
+   }
+
+  
+  .swiper {
+  width: 100%; /* عرض اسلایدر به صورت کامل */
+  margin-left: 0;
+}
+
+.swiper-slide .image-slider {
+  width: 100%; /* عرض تصویر به صورت کامل */
+  height: auto; /* حفظ نسبت ابعاد تصویر */
+}
+  .swiper-pagination{
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+  }
+
+  
+
+
+
+
+ /* 
+ ======
+   Main
+ ======
+  */
+  .main{
+    font-family: 'IranYekan' , sans-serif;
+  }
+  .h-title{
+    display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  }
+  .h-title__text{
+padding-right: .7rem;
+position: relative;
+  }
+.h-title__text::after{
+  position: absolute;
+  content: "";
+  top: 2.6rem;
+  right: -2.3rem;
+  width: 7rem;
+  height: .3rem;
+  border-radius: 2rem;
+  background-color: var(--color-primary);
+
+  }
+
+  .h-products-wrapper{
+    display: flex;
+    overflow-x: hidden;
+    border: 1px solid #e0e0e2;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+  .swiper-slide {
+    min-width: 200px;
+}
+.h-product{
+width: 19rem;
+height: 38rem;
+margin-left: .5rem;
+padding: 1rem .7rem;
+}
+.h-product_image{
+  width: 15rem;
+  height: 15rem;
+  padding-bottom: 1rem;
+}
+.h-product__title{
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 2.17;
+  color: var(--color-title-product);
+  font-weight: 700;
+}
+.h-product__caption{
+  color: var(--color-primary);
+  font-size: 1.2rem;
+font-weight: 600;
+margin-bottom: 1.4rem;
+
+}
+.h-product__info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.h-product__percent{
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 1.6rem;
+  padding:.2rem .7rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.h-product__price{
+  font-size: 1.4rem;
+  font-weight: 500;
+
+}
+.h-product__price span{
+  font-size: 1.2rem;
+}
+.h-product__pervious-price{
+color: #c0c2c5;
+text-decoration: line-through;
+font-size: 1.2rem;
+font-weight: 500;
+}
+.h-product__line{
+  width: 100%;
+  height: .3rem;
+  background-color: var(--color-primary);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+.h-product__info-sold-product{
+display: flex;
+justify-content: space-between;
+}
+.h-product__info-sold-product__percent{
+  color: var(--color-primary);
+  font-size: 1.2rem;
+font-weight: 500;
+}
+.h-product__info-sold-product__percent span{
+  color: var(--color-title-product);
+  font-size: 1.2rem;
+font-weight: 500;
+}
+.h-wonderful__percent{
+display: flex;
+justify-content: space-around;
+align-items: center;
+cursor: pointer;
+}
+.h-wonderful__percent-image{
+  width: 5.8rem;
+  height: 5.8rem;
+  position: relative;
+}
+
+
+.wrapper{
+  margin-top: 2rem;
+  /* background-color: #e8ebef; */
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#e8ebef url(../images/earlyAccessPatternPlus.svg) right center no-repeat;
+}
+.h-product__banner-time{
+  background:url(../images/earlyAccessPatternPlusMobile.svg) left center no-repeat ;
+}
+.h-product__banner-time__title{
+  color: #27115a;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.h-product__banner-time-digital{
+display: flex;
+gap: 1rem;
+justify-content: space-between;
+align-items: center;
+}
+.h-product__banner-time-digital__hour , .h-product__banner-time-digital__minute , .h-product__banner-time-digital__second{
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  color: #8a2be2;
+  margin-top: 1rem;
+}
+
+.h-product__banner-time-digital__info{
+  color:#8a2be2;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.h-product__banner-time-digital__info svg{
+  cursor: pointer;
+}
+
+/* پیش‌فرض برای دسکتاپ */
+.h-wonderful__percent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 1rem; /* فاصله بین آیتم‌ها */
+}
+
+.h-wonderful__percent-one {
+  text-align: center;
+}
+
+.h-wonderful__percent-image-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.h-wonderful__percent-image {
+  width: 5.8rem;
+  height: 5.8rem;
+  position: relative;
+  border-radius: 50%;
+}
+
+.h-wonderful__percent span {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.h-wonderful__percent-one__image-hypermarkrt{
+  max-width: 100%;
+}
+.btn-banner {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* مدیا کوئری برای صفحات کوچک‌تر */
+@media (max-width: 1024px) {
+  .h-wonderful__percent {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .h-wonderful__percent-image-wrapper {
+    gap: 1rem;
+  }
+
+  .h-wonderful__percent-image {
+    width: 4.5rem; 
+    height: 4.5rem;
+  }
+
+  .h-wonderful__percent span {
+    font-size: 1.2rem; 
+    padding: 0.4rem 0.9rem;
+  }
+
+  .btn-banner {
+    font-size: 1.4rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+/* مدیا کوئری برای موبایل‌ها */
+@media (max-width: 768px) {
+  .h-wonderful__percent {
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem; 
+  }
+  .h-wonderful__percent-one{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .h-wonderful__percent-image-wrapper {
+    gap: 1rem; 
+  }
+
+  .h-wonderful__percent-image {
+    width: 4rem; 
+    height: 4rem;
+  }
+
+  .h-wonderful__percent span {
+    font-size: 1.2rem; 
+    padding: 0.4rem 1rem;
+  }
+
+  .btn-banner {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .h-wonderful__percent {
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem; 
+  }
+
+  .h-wonderful__percent-image-wrapper {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .h-wonderful__percent-image {
+    width: 3.5rem; 
+    height: 3.5rem;
+  }
+
+  .h-wonderful__percent span {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .btn-banner {
+    font-size: 1.2rem; 
+    padding: 0.7rem 1.3rem;
+  }
+}
+   
+
+
+
+/* بخش بنر محصول */
+
+
+
+
+/* ریسپانسیو برای تبلت‌ها */
+@media (max-width: 1024px) {
+   .h-product__banner {
+    flex-direction: column; 
+    align-items: flex-start;
+   } 
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .h-product__banner-image-wrapper {
+    width: calc(100% - 30%);
+    margin-bottom: 1rem;
+  }
+
+  .h-product__banner-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+
+/* ریسپانسیو برای موبایل‌ها */
+@media (max-width: 768px) {
+  .h-product__banner-image-wrapper img{
+    max-width: 100%;
+  }
+  .h-product__banner-time {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* .h-product__banner-time-digital { */
+    /* flex-direction: column; */
+  /* } */
+
+  .h-product__banner-time-digital__hour,
+  .h-product__banner-time-digital__minute,
+  .h-product__banner-time-digital__second {
+    font-size: 1.4rem; /* کاهش اندازه برای موبایل‌ها */
+    padding: 0.8rem;
+  }
+
+  .h-product__banner-time-digital__info {
+    font-size: 1.4rem;
+  }
+}
+
+/* ریسپانسیو برای موبایل‌های بسیار کوچک */
+@media (max-width: 480px) {
+  .h-product__banner {
+    flex-direction: column;
+  }
+
+  .h-product__banner-time-digital__hour,
+  .h-product__banner-time-digital__minute,
+  .h-product__banner-time-digital__second {
+    font-size: 1.2rem; /* کاهش بیشتر اندازه فونت */
+    padding: 0.5rem;
+  }
+
+  .h-product__banner-time-digital__info {
+    font-size: 1.2rem;
+  }
+
+  .h-product__banner-time__title {
+    font-size: 1.4rem; /* کاهش اندازه عنوان */
+  }
+}
+
+
+
+
+/* page layout (products & filter sidebar) */
+.h-page-layout{
+display: flex;
+align-items:start;
+gap: 1rem;
+}
+.h-filter-sidebar{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  border: #e0e0e2 .1rem solid;
+  border-radius: 1rem;
+  height: 65rem;
+  padding: 1.5rem 1rem;
+   box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.48);
+  overflow: visible
+}
+.h-filter-sidebar__title{
+font-size: 1.9rem;
+color: #3f4064;
+}
+.h-filters-sidebar__section{
+  display: flex;
+  flex-direction: column;
+}
+.h-filters-sidebar-brands , .h-filters-sidebar-range-prices{
+display: flex;
+justify-content: space-between;
+position: relative;
+}
+.h-filters-sidebar-brands__title ,.h-filters-sidebar-range-prices__title{
+font-weight: 500;
+font-size: 1.9rem;
+}
+.h-filters-sidebar-brands__chevron-down , .h-filters-sidebar-range-prices__chevron-down{
+width: 2.4rem;
+height: 2.4rem;
+cursor: pointer;
+margin-bottom: 5rem;
+
+}
+
+.h-filters-sidebar-brands::after{
+content: '';
+position: absolute;
+right: 0;
+top: 5rem;
+width: 100%;
+height: 0.1rem;
+background-color: #ececec;
+margin-bottom: 1rem;
+}
+
+.h-filters-sidebar-send , .h-filters-sidebar-send-costomer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+    margin-bottom: 4rem;
+}
+.h-filters-sidebar-send__title , .h-filters-sidebar-send-costomer__title{
+font-weight: bold;
+}
+.h-filters-sidebar-send__image , .h-filters-sidebar-send-costomer__image{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.form-switch .form-check-input{
+width: 4rem !important;
+height: 2rem;
+}
+.form-switch .form-check-input:checked{
+  background-color: #19bfd3;
+}
+.form-switch .form-check-input:focus{
+  box-shadow: none;
+}
+.h-filters-sidebar-send::after{
+  content: '';
+position: absolute;
+right: 0;
+top: 5rem;
+width: 100%;
+height: 0.1rem;
+background-color: #ececec;
+margin-bottom: 1rem;
+}
+
+.h-filters-sidebar-send-costomer-right{
+  display: flex;
+  flex-direction: column;
+}
+.h-filters-sidebar-send-costomer-right__text{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-title-product);
+}
+.h-filters-sidebar-send-costomer::after{
+  content: '';
+position: absolute;
+right: 0;
+top: 7rem;
+width: 100%;
+height: 0.1rem;
+background-color: #ececec;
+margin-bottom: 1rem;
+}
+.h-filters-sidebar-range-prices::after{
+content: '';
+position: absolute;
+right: 0;
+top: 5rem;
+width: 100%;
+height: 0.1rem;
+background-color: #ececec;
+margin-bottom: 1rem;
+}
+
+.h-products-grids{
+  flex-grow: 1;
+}
+.h-sorting-options{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.h-sorting-options svg{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+/* .h-sorting-options__title{
+
+} */
+.h-sorting-options-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+     flex-grow: 1;
+}
+.h-sorting-options__link{
+text-decoration: none;
+color: #83858b;
+font-size: 1.2rem;
+font-weight: 500;
+}
+.h-sorting-options-SortBy365Items{
+  color: #83858b;
+  font-size: 1.2rem;
+}
+
+.h-products-grids-products{
+/* display: grid;
+grid-template-columns: repeat(3,1fr); */
+  margin-top: 1rem;
+}
+.h-products-grids-product{
+  padding: 2rem 1rem;
+    border: .1rem solid #ececec;
+  transition: all .5s ease-in;
+  cursor: pointer;
+      height: 100%;
+}
+
+.h-products-grids-product:hover{
+  border: .1rem solid #ececec;
+  box-shadow:1px 1px 4px  #83858b;
+
+}
+.h-products-grids-product__amazing-custom{
+margin: 1rem;
+}
+.h-products-grids-product__headphone__wrapper{
+  display: flex;
+  justify-content: center;
+}
+.h-products-grids-product__headphone{
+width: 24rem;
+height: 24rem;
+}
+.h-products-grids-product__title{
+color: #3f4064;
+font-size: 1.3rem;
+padding:4.5rem 1rem 3rem 0;
+}
+.h-products-grids-product__stock-rating-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.h-products-grids-product__stock-rating-container__stock-text{
+color:#ef394e;
+font-size: 1.2rem;
+}
+
+.h-products-grids-product__stock-rating-container__rating svg{
+width: 1.6rem;
+height: 1.6rem;
+fill: var(--color-icon-rating);
+padding-right: 0.2rem;
+}
+.h-products-grids-product__discount-price-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.h-products-grids-product__discount-price-container__discount{
+font-size: 1.2rem;
+color: var(--color-white);
+background-color: var(--color-bg-discount);
+padding: 0.1rem 0.65rem;
+border-radius: 2rem;
+margin: .5rem 0 1rem 0;
+
+}
+.h-products-grids-product__discount-price-container__price{
+color: var(--color-text-price);
+font-size: 1.6rem;
+}
+.h-products-grids-product__old-price-wrapper,.h-products-grids-product__timer-wrapper{
+  display: flex;
+  justify-content: left;
+}
+.h-products-grids-product__old-price{
+color: #c0c2c5;
+font-size: 1.2rem;
+text-decoration: line-through;
+padding: 0 0 1rem 1rem;
+}
+.h-products-grids-product__timer{
+font-size: 1.2rem;
+color: #ef394e;
+text-align: left;
+}
+
+
+footer{
+  font-family:'IRANYekan',sans-serif ;
+  margin: 30px 15px 0 15px;
+}
+a{
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.flex{
+  display:flex;
+}
+.flex-row{
+  flex-direction: row;
+}
+.flex-col{
+  flex-direction: column;
+}
+.nowrap{
+  flex-wrap: nowrap;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+.m-logo img {
+  height: 2rem;
+}
+.m-upbutton button {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 3px 14px 7px 14px;
+  font-size: .9rem;
+  line-height: 2rem;
+  color:var(--line-color) ;
+  border: 1px solid var(--border-color); 
+}
+.m-upbutton button svg{
+  color:var(--button-color) ;
+  font-weight: 700 !important;
+}
+.m-upbutton button:hover{
+  cursor: pointer;
+}
+
+.m-Description{
+  padding-top: 15px;
+}
+.m-Description-container-desktop{
+  justify-content: right;
+}
+.m-Description-container-desktop div {
+  margin:0 15px;
+  color: var(--line-color) !important;
+
+}
+.m-Description-container-desktop p{
+  color: var(--secondary-color) !important;
+  font-size: 1.3rem;
+}
+
+.m-Services{
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.m-Services-img{
+  height: 55px;
+  margin-right: 30px;
+}
+.m-About-DigiKala{
+  margin-right: 15px;
+}
+.m-services-Explanation{
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 0px;
+  color: var(--secondary-color);
+}
+.m-data-Digikala{
+  margin-top: 30px;
+}
+.m-font-size{
+  font-size:1.4rem;
+  line-height: 3.5rem;
+  color:var(--secondary-color) ;
+}
+.m-About-DigiKala-title{
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+.m-Communication{
+  margin-left: 30px;
+}
+.m-Communication p{
+  color: var(--primary-color);
+  margin: 20px 0;
+  font-size: 1.6rem;
+}
+.m-icon{
+  width: 250px;
+  color:#a1a3a8;
+  font-size:3.2rem; 
+}
+.m-email-input{
+  background-color:var(--input-bg-color);
+  border:none;
+  height: 4.8rem;
+  border-radius:5px;
+  width: 80%;
+
+}
+.m-input input[type="submit"]{
+  width:50px;
+  border:none;
+  border-radius:15%;
+  background-color:var(--border-color);
+  color:white;
+  font-size: 1.5rem;
+  font-family:'IRANYekan',sans-serif ;
+
+}
+::placeholder{
+  color:var(--line-color);
+  font-family:'IRANYekan',sans-serif ;
+  font-size: 1.5rem;
+  padding-left: 165px;
+}
+.m-blue-section{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius:10px;
+  height: 7rem;
+  background-color:#3c4b6d;
+  position: relative;
+}
+.m-blue-section img{
+  height: 4rem;
+  margin: 15px 15px 5px 10px;
+}
+.m-blue-section-title{
+  color:white;
+  font-size: 2.1rem;
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+.m-apps{
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: left;
+  margin-left: 5px;
+}
+.m-apps img{
+  margin-left: 10px !important;
+}
+.m-etc{
+  background-color: var(--background-color);
+  border-radius:5px
+}
+.m-bazar{
+  border-radius:5px
+}
+.m-black-line{
+  height: 0.06rem;
+  background-color:rgba(0, 0, 0, 0.1);
+  width: 99%;
+}
+.m-Digikala-Online-Store{
+  font-size: 0.88rem;
+}
+.m-Digikala-Online-Store-title{
+  font-weight: 600;
+  font-size: 2.1rem;
+  color:#62666d ;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.Digikala-trust-symbols img{
+  height: 100px;
+  width: 110px;
+  border:1px solid rgba(0, 0, 0, 0.1);
+  border-radius:10px;
+  margin-right: 15px;
+  margin-top: 30px;
+}
+#m-more{
+  display: none;
+}
+.m-Digikala-Online-Store-Description{
+  font-size:1.2rem;
+  color:var(--line-color);
+  line
+}
+.m-Digikala-Online-Store-Description p{
+  margin: 0;
+}
+.Subtext-title{
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+.m-more-btn{
+  color:var(--up-button-color) !important;
+  font-size: .8rem;
+}
+
+/* Media queri */
+@media (max-width:482px){
+.h-wonderful__percent-image-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+}
